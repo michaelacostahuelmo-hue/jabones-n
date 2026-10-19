@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Isometra&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("https://www.consumer.es/app/uploads/2019/07/img_jabones-artesanos-salud-hd.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #4f4e59;
+  border-bottom: 1px solid #541212;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f2f2f2;
+  font-weight: 500;
+}
+
+
+section {
+  padding: 30px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 900px;
+}
+
+
+.flex {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* ============================
+   TITULOS
+   ============================ */
+h1 {
+  font-family: "Isometra", sans-serif;
+  font-size: 2rem;
+  font-weight: 450;
+  letter-spacing: 1px;
+  padding: 23px;
+}
+
+h1.secundario {
+  color: rgb(15, 129, 42);
+}
+
+h1.acento {
+  color: rgb(255, 179, 0);
+}
+
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #ff7f50;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.boton:hover {
+  background-color: #ff5722;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #333;
+}
