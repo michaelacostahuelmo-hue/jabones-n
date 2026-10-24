@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Isometra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("https://www.consumer.es/app/uploads/2019/07/img_jabones-artesanos-salud-hd.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ============================
+   HEADER Y NAVEGACIÓN
+   ============================ */
+
+header {
+  background-color: rgba(219, 219, 227, 0.843);
+  border-bottom: 1px solid #541212;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: rgb(67, 151, 103);
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(221, 227, 221);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff7f50;
+}
+
+/* ============================
+   TÍTULOS
+   ============================ */
+
+h1 {
+  font-family: "Ephesis", cursive;
+  font-size: 4.5rem;
+  font-weight: 400;
+  color: #319d31;
+  text-align: center;
+  padding: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+h1.secundario {
+  color: rgb(15, 129, 42);
+}
+
+h1.acento {
+  color: rgb(255, 179, 0);
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+h3 {
+  margin-bottom: 10px;
+  color: #4f4e59;
+}
+
+/* ============================
+   CONTENEDOR PRINCIPAL
+   ============================ */
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+section {
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+/* ============================
+   FLEXBOX
+   ============================ */
+
+.flex {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.flex article {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 230px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* ============================
+   IMÁGENES
+   ============================ */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figure {
+  margin: 20px 0;
+  text-align: center;
+}
+
+figure img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+figcaption {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* ============================
+   BOTONES Y FORMULARIOS
+   ============================ */
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background-color: #ff7f50;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.boton:hover {
+  background-color: #ff5722;
+  transform: translateY(-2px);
+}
+
+.boton i {
+  font-size: 22px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+/* ============================
+   REDES SOCIALES
+   ============================ */
+
+.fa-whatsapp {
+  color: #25D366;
+}
+
+.fa-instagram {
+  color: #E4405F;
+}
+
+.fa-facebook {
+  color: #1877F2;
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(231, 230, 239, 0.897);
+  color: #379846b6;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #ff7f50;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* =====================================
+   GRID INDEX
+===================================== */
+
+.contenedor-grid {
+  display: grid;
+  gap: 20px;
+
+  grid-template-areas:
+    "hero"
+    "tipos"
+    "productos"
+    "testimonios";
+}
+
+.hero {
+  grid-area: hero;
+}
+
+.tipos-jabones {
+  grid-area: tipos;
+}
+
+.productos {
+  grid-area: productos;
+}
+
+.testimonios {
+  grid-area: testimonios;
+}
+
+.productos-populares {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.producto {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+}
+/* =====================================
+   GRID SOBRE NOSOTROS
+===================================== */
+
+.sobre-grid {
+  display: grid;
+  gap: 20px;
+
+  grid-template-areas:
+    "titulo"
+    "historia"
+    "imagen"
+    "valores";
+}
+
+.sobre-titulo {
+  grid-area: titulo;
+}
+
+.sobre-historia {
+  grid-area: historia;
+}
+
+.sobre-imagen {
+  grid-area: imagen;
+}
+
+.sobre-valores {
+  grid-area: valores;
+}
+
+/* =====================================
+   GRID MENÚ
+===================================== */
+
+.menu-grid {
+  display: grid;
+  gap: 20px;
+
+  grid-template-areas:
+    "intro"
+    "catalogo";
+}
+
+.menu-intro {
+  grid-area: intro;
+}
+
+.catalogo-productos {
+  grid-area: catalogo;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.producto-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+}
+/* =====================================
+   GRID LUGARES DE ENTREGA
+===================================== */
+
+.entrega-grid {
+  display: grid;
+  gap: 20px;
+
+  grid-template-areas:
+    "info"
+    "zonas"
+    "mapa"
+    "extra";
+}
+
+.entrega-info {
+  grid-area: info;
+}
+
+.entrega-zonas {
+  grid-area: zonas;
+}
+
+.entrega-mapa {
+  grid-area: mapa;
+}
+
+.entrega-extra {
+  grid-area: extra;
+}
+
+/* =====================================
+   RESPONSIVE DESKTOP
+===================================== */
+
+@media screen and (min-width: 1024px) {
+
+  .contenedor-grid {
+    grid-template-columns: 2fr 1fr;
+
+    grid-template-areas:
+      "hero hero"
+      "tipos productos"
+      "testimonios testimonios";
+  }
+
+  .tipos-jabones {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .productos-populares {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .sobre-grid {
+    grid-template-columns: 2fr 1fr;
+
+    grid-template-areas:
+      "titulo titulo"
+      "historia imagen"
+      "valores valores";
+  }
+
+  .catalogo-productos {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .entrega-grid {
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas:
+      "info mapa"
+      "zonas mapa"
+      "extra extra";
+  }
+}
