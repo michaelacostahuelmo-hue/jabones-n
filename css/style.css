@@ -1,0 +1,872 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+
+/* =====================================
+   RESET GENERAL
+===================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+
+  background-image: url("https://www.consumer.es/app/uploads/2019/07/img_jabones-artesanos-salud-hd.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+header {
+  background-color: rgba(219, 219, 227, 0.843);
+  border-bottom: 1px solid #541212;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0;
+}
+
+/* =====================================
+   TÍTULOS
+===================================== */
+
+h1 {
+  font-family: "Ephesis", cursive;
+  font-size: 4.5rem;
+  font-weight: 400;
+  color: #319d31;
+  text-align: center;
+  padding: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+h1.secundario {
+  color: rgb(15, 129, 42);
+}
+
+h1.acento {
+  color: rgb(255, 179, 0);
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+h3 {
+  margin-bottom: 10px;
+  color: #4f4e59;
+}
+
+h4 {
+  color: #319d31;
+}
+
+/* =====================================
+   CONTENIDO PRINCIPAL
+===================================== */
+
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+section {
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* =====================================
+   FLEXBOX
+===================================== */
+
+.flex {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.flex article {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 230px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* =====================================
+   IMÁGENES
+===================================== */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figure {
+  margin: 20px 0;
+  text-align: center;
+}
+
+figure img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+figcaption {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* =====================================
+   BOTONES PERSONALES
+===================================== */
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background-color: #ff7f50;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.boton:hover {
+  background-color: #ff5722;
+  transform: translateY(-2px);
+}
+
+.boton i {
+  font-size: 22px;
+}
+
+/* =====================================
+   FORMULARIOS
+===================================== */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* =====================================
+   REDES SOCIALES
+===================================== */
+
+.fa-whatsapp {
+  color: #25D366;
+}
+
+.fa-instagram {
+  color: #E4405F;
+}
+
+.fa-facebook {
+  color: #1877F2;
+}
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(231, 230, 239, 0.897);
+  color: #379846b6;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #ff7f50;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-simple {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(231, 230, 239, 0.9);
+  margin-top: 40px;
+}
+
+/* =====================================
+   GRID INDEX
+===================================== */
+
+.contenedor-grid {
+  display: grid;
+  gap: 20px;
+
+  grid-template-areas:
+    "hero"
+    "tipos"
+    "productos"
+    "testimonios";
+}
+
+.hero {
+  grid-area: hero;
+}
+
+.tipos-jabones {
+  grid-area: tipos;
+}
+
+.productos {
+  grid-area: productos;
+}
+
+.testimonios {
+  grid-area: testimonios;
+}
+
+.productos-populares {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.producto {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+/* =====================================
+   GRID SOBRE NOSOTROS
+===================================== */
+
+.sobre-grid {
+  display: grid;
+  gap: 20px;
+
+  grid-template-areas:
+    "titulo"
+    "historia"
+    "imagen"
+    "valores";
+}
+
+.sobre-titulo {
+  grid-area: titulo;
+}
+
+.sobre-historia {
+  grid-area: historia;
+}
+
+.sobre-imagen {
+  grid-area: imagen;
+}
+
+.sobre-valores {
+  grid-area: valores;
+}
+
+/* =====================================
+   GRID MENÚ
+===================================== */
+
+.menu-grid {
+  display: grid;
+  gap: 20px;
+
+  grid-template-areas:
+    "intro"
+    "catalogo";
+}
+
+.menu-intro {
+  grid-area: intro;
+}
+
+.catalogo-productos {
+  grid-area: catalogo;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.producto-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+/* =====================================
+   GRID LUGARES DE ENTREGA
+===================================== */
+
+.entrega-grid {
+  display: grid;
+  gap: 20px;
+
+  grid-template-areas:
+    "info"
+    "zonas"
+    "mapa"
+    "extra";
+}
+
+.entrega-info {
+  grid-area: info;
+}
+
+.entrega-zonas {
+  grid-area: zonas;
+}
+
+.entrega-mapa {
+  grid-area: mapa;
+}
+
+.entrega-extra {
+  grid-area: extra;
+}
+
+/* =====================================
+   RESPONSIVE DESKTOP
+===================================== */
+
+@media screen and (min-width: 1024px) {
+
+  .contenedor-grid {
+    grid-template-columns: 2fr 1fr;
+
+    grid-template-areas:
+      "hero hero"
+      "tipos productos"
+      "testimonios testimonios";
+  }
+
+  .tipos-jabones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .productos-populares {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sobre-grid {
+    grid-template-columns: 2fr 1fr;
+
+    grid-template-areas:
+      "titulo titulo"
+      "historia imagen"
+      "valores valores";
+  }
+
+  .catalogo-productos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .entrega-grid {
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas:
+      "info mapa"
+      "zonas mapa"
+      "extra extra";
+  }
+
+}
+/* =====================================
+   BOOTSTRAP PERSONALIZADO
+===================================== */
+
+/* =====================================
+   NAVBAR BOOTSTRAP
+===================================== */
+
+.navbar {
+  background-color: rgb(67, 151, 103) !important;
+}
+
+.navbar-brand {
+  font-family: "Ephesis", cursive;
+  font-size: 2rem;
+  color: white !important;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-link {
+  color: white !important;
+  transition: all 0.3s ease;
+}
+
+.nav-link.active {
+  color: #ffb300 !important;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: #ffb300 !important;
+}
+
+.nav-link:focus {
+  color: #ffb300 !important;
+  outline: 2px solid #ffb300;
+  outline-offset: 4px;
+}
+
+.nav-link:active {
+  transform: scale(0.95);
+}
+
+/* =====================================
+   CAROUSEL
+===================================== */
+
+.carousel {
+  margin-top: 20px;
+}
+
+.carousel-inner {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* =====================================
+   TARJETAS BOOTSTRAP
+===================================== */
+
+.card {
+  background: #ffffff;
+  cursor: pointer;
+
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  color: #319d31;
+  font-weight: bold;
+}
+
+.card-text {
+  color: #555;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card:focus-within {
+  box-shadow: 0 0 15px #ffb300;
+}
+
+.card:active {
+  transform: scale(0.98);
+}
+
+/* =====================================
+   IMÁGENES DE TARJETAS
+===================================== */
+
+.card-img-top {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* =====================================
+   BOTONES BOOTSTRAP
+===================================== */
+
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 179, 0, 0.5);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* =====================================
+   FORMULARIOS BOOTSTRAP
+===================================== */
+
+.form-control {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #319d31;
+
+  box-shadow:
+    0 0 8px rgba(49, 157, 49, 0.3);
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+/* =====================================
+   FORMULARIO CONTACTO
+===================================== */
+
+.card.shadow {
+  border-radius: 15px;
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+/* =====================================
+   IMÁGENES GENERALES
+===================================== */
+
+.hero img,
+.imagen-taller img,
+.carousel img,
+.card-img-top,
+.entrega-mapa img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+.hero img,
+.imagen-taller img {
+  border-radius: 10px;
+}
+
+/* =====================================
+   CONTENEDORES BOOTSTRAP
+===================================== */
+
+.container {
+  max-width: 1200px;
+}
+
+.row {
+  margin-top: 20px;
+}
+/* =====================================
+   EFECTOS OBLIGATORIOS DEL CHECKPOINT
+===================================== */
+
+a,
+button,
+.btn,
+.boton,
+.card,
+.nav-link {
+  transition: all 0.3s ease;
+}
+
+/* =====================================
+   HOVER
+===================================== */
+
+a:hover,
+button:hover,
+.btn:hover,
+.boton:hover {
+  opacity: 0.9;
+}
+
+.boton:hover {
+  background-color: #ff5722;
+  transform: translateY(-2px);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link:hover {
+  color: #ffb300 !important;
+}
+
+/* =====================================
+   FOCUS
+===================================== */
+
+a:focus,
+button:focus,
+.btn:focus,
+.boton:focus {
+  outline: 2px solid #ffb300;
+  outline-offset: 2px;
+}
+
+.nav-link:focus {
+  color: #ffb300 !important;
+  outline: 2px solid #ffb300;
+  outline-offset: 4px;
+}
+
+.form-control:focus {
+  border-color: #319d31;
+
+  box-shadow:
+    0 0 8px rgba(49, 157, 49, 0.3);
+}
+
+.card:focus-within {
+  box-shadow: 0 0 15px #ffb300;
+}
+
+/* =====================================
+   ACTIVE
+===================================== */
+
+a:active,
+button:active,
+.btn:active,
+.boton:active {
+  transform: scale(0.97);
+}
+
+.nav-link:active {
+  transform: scale(0.95);
+}
+
+.card:active {
+  transform: scale(0.98);
+}
+
+/* =====================================
+   AJUSTES PARA IMÁGENES
+===================================== */
+
+.hero img,
+.card-img-top,
+.imagen-taller img,
+.carousel img,
+.entrega-mapa img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+.hero img,
+.imagen-taller img {
+  border-radius: 10px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* =====================================
+   RESPONSIVE TABLET
+===================================== */
+
+@media screen and (max-width: 992px) {
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  main {
+    max-width: 95%;
+  }
+
+  .carousel img {
+    height: 300px;
+  }
+
+  .card-img-top {
+    height: 220px;
+  }
+
+}
+
+/* =====================================
+   RESPONSIVE MOBILE
+===================================== */
+
+@media screen and (max-width: 768px) {
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  main {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  section {
+    padding: 15px 0;
+  }
+
+  .carousel img {
+    height: 250px;
+  }
+
+  .card-img-top {
+    height: 180px;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .btn,
+  .boton {
+    width: 100%;
+  }
+
+}
+
+/* =====================================
+   RESPONSIVE MÓVILES PEQUEÑOS
+===================================== */
+
+@media screen and (max-width: 480px) {
+
+  h1 {
+    font-size: 2rem;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .carousel img {
+    height: 200px;
+  }
+
+  .card-img-top {
+    height: 160px;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+}
+
+/* =====================================
+   AJUSTES FINALES
+===================================== */
+
+.footer-links a {
+  color: #ff7f50;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+.rounded {
+  border-radius: 10px !important;
+}
