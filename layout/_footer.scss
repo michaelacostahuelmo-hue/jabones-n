@@ -1,0 +1,35 @@
+@use "../utilities/variables" as *;
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(231, 230, 239, 0.897);
+  color: #379846b6;
+  margin-top: 40px;
+
+  a {
+    color: $color-naranja;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer-simple {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(231, 230, 239, 0.9);
+  margin-top: 40px;
+}
+
+.footer-links {
+  a {
+    color: $color-naranja;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

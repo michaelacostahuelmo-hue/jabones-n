@@ -1,0 +1,39 @@
+@use "../utilities/variables" as *;
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background-color: $color-naranja;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $color-naranja-hover;
+    transform: translateY(-2px);
+  }
+
+  i {
+    font-size: 22px;
+  }
+}
+
+.btn {
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 179, 0, 0.5);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
