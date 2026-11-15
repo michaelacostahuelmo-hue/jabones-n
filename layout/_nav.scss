@@ -1,0 +1,44 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.navbar {
+  background-color: $color-verde-navbar !important;
+}
+
+.navbar-brand {
+  font-family: $font-logo;
+  font-size: 2rem;
+  color: $color-blanco !important;
+
+  &:hover {
+    color: $color-dorado !important;
+  }
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-link {
+  color: $color-blanco !important;
+  @include transition;
+
+  &:hover,
+  &:focus {
+    color: $color-dorado !important;
+  }
+
+  &:focus {
+    outline: 2px solid $color-dorado;
+    outline-offset: 4px;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &.active {
+    color: $color-dorado !important;
+    font-weight: bold;
+  }
+}
